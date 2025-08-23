@@ -1,0 +1,21 @@
+# Entorno virtual
+venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Base de datos
+*.sqlite3
+*.db
+
+# Entornos
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
