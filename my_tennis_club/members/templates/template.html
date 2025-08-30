@@ -31,5 +31,72 @@
   {% endfor %}
 </ul>
 
+{% if greeting == 1 %}
+  <h1>Hello</h1>
+{% elif greeting == 2 %}
+  <h1>Welcome</h1>
+{% else %}
+  <h1>Goodbye</h1>
+{% endif %}
+
+{% for x in cars %}
+  <h1>{{ x.brand }}</h1>
+  <p>{{ x.model }}</p>
+  <p>{{ x.year }}</p>
+{% endfor %}
+
+{% for x in mymembers reversed %}
+  <h1>{{ x.id }}</h1>
+  <p>
+    {{ x.firstname }}
+    {{ x.lastname }}
+  </p>
+{% endfor %}
+
+<ul>
+  {% for x in fruits %}
+    <li>{{ forloop.counter }}</li>
+  {% endfor %}
+</ul>
+
+<ul>
+  {% for x in fruits %}
+    <li>{{ forloop.counter0 }}</li>
+  {% endfor %}
+</ul>
+
+<ul>
+  {% for x in fruits %}
+    <li
+      {% if forloop.first %}
+        style='background-color:lightblue;'
+      {% endif %}
+    >{{ x }}</li>
+  {% endfor %}
+</ul>
+
+<ul>
+  {% for x in fruits %}
+    <li
+      {% if forloop.last %}
+        style='background-color:lightblue;'
+      {% endif %}
+    >{{ x }}</li>
+  {% endfor %}
+</ul>
+
+<ul>
+  {% for x in fruits %}
+    <li>{{ forloop.revcounter }}</li>
+  {% endfor %}
+</ul>
+
+<ul>
+  {% for x in fruits %}
+    <li>{{ forloop.revcounter0 }}</li>
+  {% endfor %}
+</ul>
+
+</ul>
 </body>
 </html>
