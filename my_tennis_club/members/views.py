@@ -24,11 +24,15 @@ def main(request):
 
 def testing(request):
   mymembers = Member.objects.all().values()
+  mydata = Member.objects.all()
+  mydata2 = Member.objects.values_list('firstname')
   template = loader.get_template('template.html')
   context = {
     'fruits': ['Apple', 'Banana', 'Cherry'],
     'firstname': 'Linus',
     'mymembers': mymembers,
+    'mymembers2': mydata,
+    'mymembers3': mydata2,
     'greeting' : 0,  
     'x': ['Apple', 'Banana', 'Cherry'], 
     'y': ['Apple', 'Banana', 'Cherry'],
